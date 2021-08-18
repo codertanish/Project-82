@@ -15,6 +15,7 @@ function my_mousedown(e){
 
     color= document.getElementById("ColorInput").value;
     lineWidth= document.getElementById("LineWidthInput").value;
+    radius= document.getElementById("RadiusInput").value;
 
     mouseEvent = "mouseDown";
 }
@@ -51,7 +52,9 @@ function my_mousemove(e){
     ctx.beginPath();
     ctx.strokeStyle = color;
     ctx.lineWidth = lineWidth;
-    ctx.arc = (current_x, current_y, radius, 0, 2 * Math.PI);
+    ctx.arc(current_x, current_y, radius, 0, 2 * Math.PI);
     ctx.stroke();
     }
+
+}
 
